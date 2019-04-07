@@ -1,0 +1,5 @@
+--require src/tests/contract/helpers.js
+--reporter mocha-multi-reporters
+--reporter-options configFile=src/tests/contract/config.json
+--slow 1000
+--timeout 5000

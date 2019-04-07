@@ -1,0 +1,8 @@
+<testsuite name="Mocha Tests" tests="6" failures="0" errors="0" skipped="0" timestamp="Sun, 07 Apr 2019 22:35:18 GMT" time="4.921">
+<testcase classname="Countries Service" name="GetCountriesAvailable: deve retornar uma objeto que cont&#xE9;m a lista dos pa&#xED;ses cadastrados no webservice." time="1.528"/>
+<testcase classname="Holidays Service" name="GetHolidaysAvailable: deve retornar uma objeto que cont&#xE9;m a lista dos feriados de um determinado pa&#xED;s." time="0.469"/>
+<testcase classname="Holidays Service" name="GetHolidaysForMonth: deve retornar um objeto que cont&#xE9;m a lista de feriados por m&#xEA;s de um determinado pa&#xED;s a partir do m&#xEA;s e ano especificos." time="0.457"/>
+<testcase classname="Holidays Service" name="GetHolidaysForYear: deve retornar uma objeto que cont&#xE9;m uma lista dos feriados de um determinado pa&#xED;s e de um terminado ano." time="0.553"/>
+<testcase classname="Holidays Service" name="GetHolidaysForDateRange: deve retornar um objeto que cont&#xE9;m uma lista dos feriados cadastrados de um determinado pa&#xED;s a partir de uma data de unicio/fim." time="1.385"/>
+<testcase classname="Holidays Service" name="GetHolidayDate: deve retonar uma objeto que cont&#xE9;m a data de um feriado a partir do pa&#xED;s, c&#xF3;digo do feriado e ano inseridos." time="0.465"/>
+</testsuite>

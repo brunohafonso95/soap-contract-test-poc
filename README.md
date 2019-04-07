@@ -1,0 +1,1 @@
+# Testes de contrato de um webservice SOAP com node.js
