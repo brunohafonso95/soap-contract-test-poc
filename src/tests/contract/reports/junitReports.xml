@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="4.856999999999999" tests="6" failures="0">
-  <testsuite name="Root Suite" timestamp="2019-04-07T22:35:14" tests="0" failures="0" time="0">
+<testsuites name="Mocha Tests" time="1.016" tests="6" failures="0">
+  <testsuite name="Root Suite" timestamp="2019-04-24T17:59:12" tests="0" failures="0" time="0">
   </testsuite>
-  <testsuite name="Countries Service" timestamp="2019-04-07T22:35:14" tests="1" file="C:\Users\bhenriquea\soap-test\src\tests\contract\tests\contries.spec.js" failures="0" time="1.528">
-    <testcase name="Countries Service GetCountriesAvailable: deve retornar uma objeto que contém a lista dos países cadastrados no webservice." time="1.528" classname="GetCountriesAvailable: deve retornar uma objeto que contém a lista dos países cadastrados no webservice.">
+  <testsuite name="Countries Service" timestamp="2019-04-24T17:59:12" tests="1" file="C:\Users\bhenriquea\soap-test\src\tests\contract\tests\contries.spec.js" failures="0" time="0.493">
+    <testcase name="Countries Service GetCountriesAvailable: deve retornar uma objeto que contém a lista dos países cadastrados no webservice." time="0.493" classname="GetCountriesAvailable: deve retornar uma objeto que contém a lista dos países cadastrados no webservice.">
     </testcase>
   </testsuite>
-  <testsuite name="Holidays Service" timestamp="2019-04-07T22:35:15" tests="5" file="C:\Users\bhenriquea\soap-test\src\tests\contract\tests\holidays.spec.js" failures="0" time="3.3289999999999997">
-    <testcase name="Holidays Service GetHolidaysAvailable: deve retornar uma objeto que contém a lista dos feriados de um determinado país." time="0.469" classname="GetHolidaysAvailable: deve retornar uma objeto que contém a lista dos feriados de um determinado país.">
+  <testsuite name="Holidays Service" timestamp="2019-04-24T17:59:13" tests="5" file="C:\Users\bhenriquea\soap-test\src\tests\contract\tests\holidays.spec.js" failures="0" time="0.523">
+    <testcase name="Holidays Service GetHolidaysAvailable: deve retornar uma objeto que contém a lista dos feriados de um determinado país." time="0.152" classname="GetHolidaysAvailable: deve retornar uma objeto que contém a lista dos feriados de um determinado país.">
     </testcase>
-    <testcase name="Holidays Service GetHolidaysForMonth: deve retornar um objeto que contém a lista de feriados por mês de um determinado país a partir do mês e ano especificos." time="0.457" classname="GetHolidaysForMonth: deve retornar um objeto que contém a lista de feriados por mês de um determinado país a partir do mês e ano especificos.">
+    <testcase name="Holidays Service GetHolidaysForMonth: deve retornar um objeto que contém a lista de feriados por mês de um determinado país a partir do mês e ano especificos." time="0.075" classname="GetHolidaysForMonth: deve retornar um objeto que contém a lista de feriados por mês de um determinado país a partir do mês e ano especificos.">
     </testcase>
-    <testcase name="Holidays Service GetHolidaysForYear: deve retornar uma objeto que contém uma lista dos feriados de um determinado país e de um terminado ano." time="0.553" classname="GetHolidaysForYear: deve retornar uma objeto que contém uma lista dos feriados de um determinado país e de um terminado ano.">
+    <testcase name="Holidays Service GetHolidaysForYear: deve retornar uma objeto que contém uma lista dos feriados de um determinado país e de um terminado ano." time="0.083" classname="GetHolidaysForYear: deve retornar uma objeto que contém uma lista dos feriados de um determinado país e de um terminado ano.">
     </testcase>
-    <testcase name="Holidays Service GetHolidaysForDateRange: deve retornar um objeto que contém uma lista dos feriados cadastrados de um determinado país a partir de uma data de unicio/fim." time="1.385" classname="GetHolidaysForDateRange: deve retornar um objeto que contém uma lista dos feriados cadastrados de um determinado país a partir de uma data de unicio/fim.">
+    <testcase name="Holidays Service GetHolidaysForDateRange: deve retornar um objeto que contém uma lista dos feriados cadastrados de um determinado país a partir de uma data de unicio/fim." time="0.128" classname="GetHolidaysForDateRange: deve retornar um objeto que contém uma lista dos feriados cadastrados de um determinado país a partir de uma data de unicio/fim.">
     </testcase>
-    <testcase name="Holidays Service GetHolidayDate: deve retonar uma objeto que contém a data de um feriado a partir do país, código do feriado e ano inseridos." time="0.465" classname="GetHolidayDate: deve retonar uma objeto que contém a data de um feriado a partir do país, código do feriado e ano inseridos.">
+    <testcase name="Holidays Service GetHolidayDate: deve retonar uma objeto que contém a data de um feriado a partir do país, código do feriado e ano inseridos." time="0.085" classname="GetHolidayDate: deve retonar uma objeto que contém a data de um feriado a partir do país, código do feriado e ano inseridos.">
     </testcase>
   </testsuite>
 </testsuites>

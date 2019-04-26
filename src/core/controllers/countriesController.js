@@ -6,14 +6,13 @@ const countriesController = {};
 countriesController.GetCountriesAvailable = () => {
     return new Promise(async (resolve, reject) => {
         try {
-            const client = await soap.createClientAsync(SOAP_API_URL)
+            const client = await soap.createClientAsync(SOAP_API_URL);
             const result = await client.GetCountriesAvailableAsync();
             resolve(result[0]);
         } catch (error) {
             reject(error);
         }
     });
-
 }
 
 

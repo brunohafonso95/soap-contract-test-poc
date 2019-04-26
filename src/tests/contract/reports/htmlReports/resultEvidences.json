@@ -5,9 +5,9 @@
     "passes": 6,
     "pending": 0,
     "failures": 0,
-    "start": "2019-04-07T22:35:14.043Z",
-    "end": "2019-04-07T22:35:18.964Z",
-    "duration": 4921,
+    "start": "2019-04-24T17:59:12.593Z",
+    "end": "2019-04-24T17:59:13.671Z",
+    "duration": 1078,
     "testsRegistered": 6,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -19,7 +19,7 @@
     "pendingPercentClass": "danger"
   },
   "suites": {
-    "uuid": "37e69355-83f5-4046-9664-17fc1478a6e4",
+    "uuid": "8e3ba1da-3a95-4370-82f8-66cf833fefd8",
     "title": "",
     "fullFile": "",
     "file": "",
@@ -28,7 +28,7 @@
     "tests": [],
     "suites": [
       {
-        "uuid": "bfb83e38-6407-4c4e-833d-f7fcb8702777",
+        "uuid": "5f865a46-61f8-458d-8c51-07ee1a43eccf",
         "title": "Countries Service",
         "fullFile": "C:\\Users\\bhenriquea\\soap-test\\src\\tests\\contract\\tests\\contries.spec.js",
         "file": "\\src\\tests\\contract\\tests\\contries.spec.js",
@@ -39,9 +39,9 @@
             "title": "GetCountriesAvailable: deve retornar uma objeto que contém a lista dos países cadastrados no webservice.",
             "fullTitle": "Countries Service GetCountriesAvailable: deve retornar uma objeto que contém a lista dos países cadastrados no webservice.",
             "timedOut": false,
-            "duration": 1528,
+            "duration": 493,
             "state": "passed",
-            "speed": "slow",
+            "speed": "fast",
             "pass": true,
             "fail": false,
             "pending": false,
@@ -49,25 +49,25 @@
             "code": "addContext(this,\n    `Este teste tem como objetivo validar se o retorno da transação \"GetCountriesAvailable\" segue o modelo estabelecido que garante o pleno funcionamento dos demais serviços.`\n);\naddContext(this, 'http://www.url.com/pathname');\nrequest\n    .get('/getcountriesavailable')\n    .end((error, res) => {\n        joiAssert(res.body, countriesAvaliableModel);\n        done(error);\n    });",
             "err": {},
             "isRoot": false,
-            "uuid": "4f65ffa0-0b05-4f7d-92c1-e0133c434e88",
+            "uuid": "10da9194-5947-4b58-802c-f9bc12db34cb",
             "isHook": false,
             "skipped": false
           }
         ],
         "suites": [],
         "passes": [
-          "4f65ffa0-0b05-4f7d-92c1-e0133c434e88"
+          "10da9194-5947-4b58-802c-f9bc12db34cb"
         ],
         "failures": [],
         "pending": [],
         "skipped": [],
-        "duration": 1528,
+        "duration": 493,
         "root": false,
         "rootEmpty": false,
-        "_timeout": 5000
+        "_timeout": 10000
       },
       {
-        "uuid": "b4d53369-75aa-4204-a0f7-2db03fe8bcca",
+        "uuid": "4089fc1b-55de-4329-bce6-a61d860272db",
         "title": "Holidays Service",
         "fullFile": "C:\\Users\\bhenriquea\\soap-test\\src\\tests\\contract\\tests\\holidays.spec.js",
         "file": "\\src\\tests\\contract\\tests\\holidays.spec.js",
@@ -78,7 +78,7 @@
             "title": "GetHolidaysAvailable: deve retornar uma objeto que contém a lista dos feriados de um determinado país.",
             "fullTitle": "Holidays Service GetHolidaysAvailable: deve retornar uma objeto que contém a lista dos feriados de um determinado país.",
             "timedOut": false,
-            "duration": 469,
+            "duration": 152,
             "state": "passed",
             "speed": "fast",
             "pass": true,
@@ -88,7 +88,7 @@
             "code": "addContext(this,\n    `Este teste tem como objetivo validar se o retorno da transação \"GetHolidaysAvailable\" segue o modelo estabelecido que garante o pleno funcionamento dos demais serviços.`\n);\naddContext(this, 'http://www.url.com/pathname');\nrequest\n    .get('/getholidaysavailable')\n    .end((error, res) => {\n        joiAssert(res.body, holidaysAvailableModel);\n        done(error);\n    });",
             "err": {},
             "isRoot": false,
-            "uuid": "b7f841e3-f008-4291-8537-213ecb7872ad",
+            "uuid": "2a191901-b7c8-47f1-b0f1-40f48231e944",
             "isHook": false,
             "skipped": false
           },
@@ -96,7 +96,7 @@
             "title": "GetHolidaysForMonth: deve retornar um objeto que contém a lista de feriados por mês de um determinado país a partir do mês e ano especificos.",
             "fullTitle": "Holidays Service GetHolidaysForMonth: deve retornar um objeto que contém a lista de feriados por mês de um determinado país a partir do mês e ano especificos.",
             "timedOut": false,
-            "duration": 457,
+            "duration": 75,
             "state": "passed",
             "speed": "fast",
             "pass": true,
@@ -106,7 +106,7 @@
             "code": "addContext(this,\n    `Este teste tem como objetivo validar se o retorno da transação \"GetHolidaysForMonth\" segue o modelo estabelecido que garante o pleno funcionamento dos demais serviços.`\n);\naddContext(this, 'http://www.url.com/pathname');\nrequest\n    .get('/getholidaysformonth')\n    .end((error, res) => {\n        joiAssert(res.body, holidaysForMonthModel);\n        done(error);\n    });",
             "err": {},
             "isRoot": false,
-            "uuid": "9a2ac26c-f9b8-42b8-a2c4-09bc877f1279",
+            "uuid": "818ab95c-25c4-4ead-8d3b-96eb0b24f29e",
             "isHook": false,
             "skipped": false
           },
@@ -114,9 +114,9 @@
             "title": "GetHolidaysForYear: deve retornar uma objeto que contém uma lista dos feriados de um determinado país e de um terminado ano.",
             "fullTitle": "Holidays Service GetHolidaysForYear: deve retornar uma objeto que contém uma lista dos feriados de um determinado país e de um terminado ano.",
             "timedOut": false,
-            "duration": 553,
+            "duration": 83,
             "state": "passed",
-            "speed": "medium",
+            "speed": "fast",
             "pass": true,
             "fail": false,
             "pending": false,
@@ -124,7 +124,7 @@
             "code": "addContext(this,\n    `Este teste tem como objetivo validar se o retorno da transação \"GetHolidaysForYear\" segue o modelo estabelecido que garante o pleno funcionamento dos demais serviços.`\n);\naddContext(this, 'http://www.url.com/pathname');\nrequest\n    .get('/getholidaysforyear')\n    .end((error, res) => {\n        joiAssert(res.body, holidaysForYearModel);\n        done(error);\n    });",
             "err": {},
             "isRoot": false,
-            "uuid": "be1cedec-e3c1-4015-bbba-c75d92083459",
+            "uuid": "274f9a93-5f01-4ff6-8ccb-9dd4aa6578d5",
             "isHook": false,
             "skipped": false
           },
@@ -132,9 +132,9 @@
             "title": "GetHolidaysForDateRange: deve retornar um objeto que contém uma lista dos feriados cadastrados de um determinado país a partir de uma data de unicio/fim.",
             "fullTitle": "Holidays Service GetHolidaysForDateRange: deve retornar um objeto que contém uma lista dos feriados cadastrados de um determinado país a partir de uma data de unicio/fim.",
             "timedOut": false,
-            "duration": 1385,
+            "duration": 128,
             "state": "passed",
-            "speed": "slow",
+            "speed": "fast",
             "pass": true,
             "fail": false,
             "pending": false,
@@ -142,7 +142,7 @@
             "code": "addContext(this,\n    `Este teste tem como objetivo validar se o retorno da transação \"GetHolidaysForDateRange\" segue o modelo estabelecido que garante o pleno funcionamento dos demais serviços.`\n);\naddContext(this, 'http://www.url.com/pathname');\nrequest\n    .get('/getholidaysfordaterange')\n    .end((error, res) => {\n        joiAssert(res.body, HolidaysForDateRangeModel);\n        done(error);\n    });",
             "err": {},
             "isRoot": false,
-            "uuid": "9ca4a7d2-4965-4c3d-b71f-2a90e6a8cb39",
+            "uuid": "0ba80270-3b07-4150-b795-e9bee7d41e6c",
             "isHook": false,
             "skipped": false
           },
@@ -150,7 +150,7 @@
             "title": "GetHolidayDate: deve retonar uma objeto que contém a data de um feriado a partir do país, código do feriado e ano inseridos.",
             "fullTitle": "Holidays Service GetHolidayDate: deve retonar uma objeto que contém a data de um feriado a partir do país, código do feriado e ano inseridos.",
             "timedOut": false,
-            "duration": 465,
+            "duration": 85,
             "state": "passed",
             "speed": "fast",
             "pass": true,
@@ -160,26 +160,26 @@
             "code": "addContext(this,\n    `Este teste tem como objetivo validar se o retorno da transação \"GetHolidayDate\" segue o modelo estabelecido que garante o pleno funcionamento dos demais serviços.`\n);\naddContext(this, 'http://www.url.com/pathname');\nrequest\n    .get('/getholidaydate')\n    .end((error, res) => {\n        joiAssert(res.body, holidayDateResultModel);\n        done(error);\n    });",
             "err": {},
             "isRoot": false,
-            "uuid": "c01607f5-53a4-4060-b0a6-592fa3da3d0c",
+            "uuid": "76633be7-9149-46d0-8537-7ff5cec771a8",
             "isHook": false,
             "skipped": false
           }
         ],
         "suites": [],
         "passes": [
-          "b7f841e3-f008-4291-8537-213ecb7872ad",
-          "9a2ac26c-f9b8-42b8-a2c4-09bc877f1279",
-          "be1cedec-e3c1-4015-bbba-c75d92083459",
-          "9ca4a7d2-4965-4c3d-b71f-2a90e6a8cb39",
-          "c01607f5-53a4-4060-b0a6-592fa3da3d0c"
+          "2a191901-b7c8-47f1-b0f1-40f48231e944",
+          "818ab95c-25c4-4ead-8d3b-96eb0b24f29e",
+          "274f9a93-5f01-4ff6-8ccb-9dd4aa6578d5",
+          "0ba80270-3b07-4150-b795-e9bee7d41e6c",
+          "76633be7-9149-46d0-8537-7ff5cec771a8"
         ],
         "failures": [],
         "pending": [],
         "skipped": [],
-        "duration": 3329,
+        "duration": 523,
         "root": false,
         "rootEmpty": false,
-        "_timeout": 5000
+        "_timeout": 10000
       }
     ],
     "passes": [],
@@ -189,7 +189,7 @@
     "duration": 0,
     "root": true,
     "rootEmpty": true,
-    "_timeout": 5000
+    "_timeout": 10000
   },
   "copyrightYear": 2019
 }

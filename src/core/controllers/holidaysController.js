@@ -13,7 +13,7 @@ const holidaysController = {};
 holidaysController.GetHolidaysAvailable = () => {
     return new Promise(async (resolve, reject) => {
         try {
-            const client = await soap.createClientAsync(SOAP_API_URL);
+            const client = await soap.createClientAsync(SOAP_API_URL, soap_client_options);
             const result = await client.GetHolidaysAvailableAsync({
                 countryCode: GetHolidaysAvailable.params.countryCode
             });
@@ -27,7 +27,7 @@ holidaysController.GetHolidaysAvailable = () => {
 holidaysController.GetHolidaysForMonth = () => {
     return new Promise(async (resolve, reject) => {
         try {
-            const client = await soap.createClientAsync(SOAP_API_URL);
+            const client = await soap.createClientAsync(SOAP_API_URL, soap_client_options);
             const result = await client.GetHolidaysForMonthAsync({
                 countryCode: GetHolidaysForMonth.params.countryCode,
                 year: GetHolidaysForMonth.params.year,
@@ -43,7 +43,7 @@ holidaysController.GetHolidaysForMonth = () => {
 holidaysController.GetHolidaysForYear = () => {
     return new Promise(async (resolve, reject) => {
         try {
-            const client = await soap.createClientAsync(SOAP_API_URL);
+            const client = await soap.createClientAsync(SOAP_API_URL, soap_client_options);
             const result = await client.GetHolidaysForYearAsync({
                 countryCode: GetHolidaysForYear.params.countryCode,
                 year: GetHolidaysForYear.params.year
@@ -58,7 +58,7 @@ holidaysController.GetHolidaysForYear = () => {
 holidaysController.GetHolidaysForDateRange = () => {
     return new Promise(async (resolve, reject) => {
         try {
-            const client = await soap.createClientAsync(SOAP_API_URL);
+            const client = await soap.createClientAsync(SOAP_API_URL, soap_client_options);
             const result = await client.GetHolidaysForDateRangeAsync({
                 countryCode: GetHolidaysForDateRange.params.countryCode,
                 startDate: GetHolidaysForDateRange.params.startDate,
@@ -74,7 +74,7 @@ holidaysController.GetHolidaysForDateRange = () => {
 holidaysController.GetHolidayDate = () => {
     return new Promise(async (resolve, reject) => {
         try {
-            const client = await soap.createClientAsync(SOAP_API_URL);
+            const client = await soap.createClientAsync(SOAP_API_URL, soap_client_options);
             const result = await client.GetHolidayDateAsync({
                 countryCode: GetHolidayDate.params.countryCode,
                 holidayCode: GetHolidayDate.params.holidayCode,

@@ -8,7 +8,8 @@
     "testContract": "mocha --opts src/tests/contract/mocha.opts src/tests/contract/**/*.spec.js",
     "generateSwagger": "node src/generateSwagger.js",
     "generateSwaggerMd": "swagger-markdown -i src/tests/contract/reports/HolidayService2-swaggerDoc.yaml",
-    "test": "npm run testContract && npm run generateSwagger && npm run generateSwaggerMd"
+    "test": "npm run testContract",
+    "test:all": "npm run testContract && npm run generateSwagger && npm run generateSwaggerMd"
   },
   "dependencies": {
     "@hapi/joi": "^15.0.0",

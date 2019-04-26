@@ -5,6 +5,15 @@
 * os pacostes ficam acessiveis nos arquivos de teste.
 *
 */
+const request = require('request');
+const request_with_defaults = request.defaults(
+    { 
+        'proxy': 'http://proxylatam.indra.es:8080', 
+        'timeout': 5000, 
+        'connection': 'keep-alive'
+    }
+);
+let soap_client_options = { 'request': request_with_defaults };
 const chai = require('chai'); // lib de assert
 const joi =  require('@hapi/joi'); // lib para montar os contratos
 const joiAssert = require('joi-assert'); // lib para fazer assert nos contratos
@@ -24,4 +33,5 @@ global.joi = joi;
 global.joiAssert = joiAssert;
 global.app = app;
 global.addContext = addContext;
+global.soap_client_options = soap_client_options;
 
