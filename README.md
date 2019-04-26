@@ -176,13 +176,13 @@ const countriesController = {}; // criando um objeto literal
 // criando o metodo GetCountriesAvailable 
 countriesController.GetCountriesAvailable = function() {
     // retornando uma promise para facilitar o trabalho com assicronismo
-    return new Promise(async (resolve, reject) => {
+    return new Promise((resolve, reject) => {
         // capturando exceções
         try {
-            // criando um cliente de forma assincrona e passando a url do serviço como parâmetro
-            const client = await soap.createClient(SOAP_API_URL, function(client) {
-                // acessando o barramento GetCountriesAvailable de forma assincrona
-                const result = await client.GetCountriesAvailable(function(result) {
+            // criando um cliente de forma sincrona e passando a url do serviço como parâmetro
+            soap.createClient(SOAP_API_URL, function(client) {
+                // acessando o barramento GetCountriesAvailable de forma sincrona
+                client.GetCountriesAvailable(function(result) {
                     // devolvendo o resultado limpo
                     resolve(result[0]);
                 });
@@ -202,6 +202,8 @@ module.exports = countriesController;
 
 Esse arquivo tem como objetivo comportar todos os métodos para a manipulação dos dados dos serviços referentes aos holidays.
 
+#### versão com async e await
+
 ```javascript
 const soap = require('soap'); // importando modulo do soap
 const { SOAP_API_URL } = require('../../config/config'); // importando configuração
@@ -216,15 +218,23 @@ const {
 
 const holidaysController = {}; // criando um objeto literal
 
+// criando um método para o modulo
 holidaysController.GetHolidaysAvailable = () => {
+    // retornando uma promise para facilitar o trabalho com assicronismo
     return new Promise(async (resolve, reject) => {
+        // capturando possiveis exceptions
         try {
+            // criando um cliente de forma assincrona e passando a url do serviço como parâmetro
             const client = await soap.createClientAsync(SOAP_API_URL, soap_client_options);
+            // acessando o barramento GetCountriesAvailable de forma assincrona e passando 
+            // como parametros os dados que precisam ser enviados para o barramento conforme a documentação
             const result = await client.GetHolidaysAvailableAsync({
                 countryCode: GetHolidaysAvailable.params.countryCode
             });
+            // devolvendo o resultado limpo
             resolve(result[0]);
         } catch (error) {
+            // devolvendo a exception capturada, caso o algoritmo lance alguma
             reject(error);
         }
     });
@@ -287,6 +297,120 @@ holidaysController.GetHolidayDate = () => {
                 year: GetHolidayDate.params.year
             });
             resolve(result[0]);
+        } catch (error) {
+            reject(error);
+        }
+    });
+};
+
+module.exports = holidaysController;
+```
+
+#### versão com callback
+
+```javascript
+const soap = require('soap'); // importando modulo do soap
+const { SOAP_API_URL } = require('../../config/config'); // importando configuração
+// importando massa de dados que será utilizada e guardando em variaveis.
+const { 
+    GetHolidaysAvailable,
+    GetHolidaysForMonth,
+    GetHolidaysForYear,
+    GetHolidaysForDateRange,
+    GetHolidayDate
+} = require('../../tests/contract/data/massaDeDados');
+
+const holidaysController = {}; // criando um objeto literal
+
+// criando um método para o modulo
+holidaysController.GetHolidaysAvailable = () => {
+    // retornando uma promise para facilitar o trabalho com assicronismo
+    return new Promise((resolve, reject) => {
+        // capturando possiveis exceptions
+        try {
+            // criando um cliente de forma assincrona e passando a url do serviço como parâmetro
+            soap.createClient(SOAP_API_URL, function(client) {
+                // acessando o barramento GetCountriesAvailable de forma assincrona e passando 
+                // como parametros os dados que precisam ser enviados para o barramento conforme a documentação
+                client.GetHolidaysAvailable({
+                    countryCode: GetHolidaysAvailable.params.countryCode
+                }, function(result) {
+                    // devolvendo o resultado limpo
+                    resolve(result[0]);
+                });
+            });
+        } catch (error) {
+            // devolvendo a exception capturada, caso o algoritmo lance alguma
+            reject(error);
+        }
+    });
+};
+
+holidaysController.GetHolidaysForMonth = () => {
+    return new Promise((resolve, reject) => {
+        try {
+            soap.createClient(SOAP_API_URL, function(client) {
+                client.GetHolidaysForMonth({
+                    countryCode: GetHolidaysForMonth.params.countryCode,
+                    year: GetHolidaysForMonth.params.year,
+                    month: GetHolidaysForMonth.params.month
+                }, function(result) {
+                    resolve(result[0]);
+                });
+            });
+        } catch (error) {
+            reject(error);
+        }
+    });
+};
+
+holidaysController.GetHolidaysForYear = () => {
+    return new Promise((resolve, reject) => {
+        try {
+            soap.createClient(SOAP_API_URL, function(client) {
+                const result = await client.GetHolidaysForYear({
+                    countryCode: GetHolidaysForYear.params.countryCode,
+                    year: GetHolidaysForYear.params.year
+                }, function(result) {
+                    resolve(result[0]);
+                });
+            });
+        } catch (error) {
+            reject(error);
+        }
+    });
+}
+
+holidaysController.GetHolidaysForDateRange = () => {
+    return new Promise((resolve, reject) => {
+        try {
+            soap.createClient(SOAP_API_URL, function(client) {
+                client.GetHolidaysForDateRange({
+                    countryCode: GetHolidaysForDateRange.params.countryCode,
+                    startDate: GetHolidaysForDateRange.params.startDate,
+                    endDate: GetHolidaysForDateRange.params.endDate
+                }, function(result) {
+                    resolve(result[0]);
+                });
+            });
+        } catch (error) {
+            reject(error);
+        }
+    });
+};
+
+holidaysController.GetHolidayDate = () => {
+    return new Promise((resolve, reject) => {
+        try {
+            soap.createClient(SOAP_API_URL, function(client) {
+                client.GetHolidayDate({
+                    countryCode: GetHolidayDate.params.countryCode,
+                    holidayCode: GetHolidayDate.params.holidayCode,
+                    year: GetHolidayDate.params.year
+                }, function(result) {
+                    resolve(result[0]);
+                });
+            });
         } catch (error) {
             reject(error);
         }
